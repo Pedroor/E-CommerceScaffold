@@ -1,0 +1,6 @@
+module Pods_EcommerceScaffold_EcommerceScaffoldTests {
+  umbrella header "Pods-EcommerceScaffold-EcommerceScaffoldTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
