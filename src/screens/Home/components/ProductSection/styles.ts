@@ -7,4 +7,5 @@ export const Section = styled.Text`
 export const SectionContainer = styled.View`
   margin-top: 16px;
   margin-left: 16px;
+  flex: 1;
 `;

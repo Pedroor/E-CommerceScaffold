@@ -1,10 +1,18 @@
 import React from "react";
-import { View } from "react-native";
+import { View, Text } from "react-native";
+import Header from "../../components/Header";
 
-// import { Container } from './styles';
+import * as S from "./styles";
 
 const Cart: React.FC = () => {
-  return <View />;
+  return (
+    <S.SafeContainer>
+      <S.Container>
+        <Header title="CARRINHO" />
+        <S.Section>Meu Carrinho</S.Section>
+      </S.Container>
+    </S.SafeContainer>
+  );
 };
 
 export default Cart;

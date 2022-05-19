@@ -16,3 +16,5 @@ export const Bag = styled.Image`
   width: 24;
   height: 24;
 `;
+
+export const TouchableBox = styled.TouchableOpacity``;

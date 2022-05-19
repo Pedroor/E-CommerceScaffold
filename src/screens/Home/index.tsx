@@ -5,6 +5,7 @@ import * as S from "./styles";
 import NewsSection from "./components/NewsSection";
 import ProductSection from "./components/ProductSection";
 import Header from "./components/Header";
+import ModalizeButton from "./components/ModalizeButton";
 
 const mockCategoryList = [
   {
@@ -37,6 +38,7 @@ const Home: React.FC = () => {
         <CategoryList categoryName="Últimos" categoryList={mockCategoryList} />
         <NewsSection />
         <ProductSection />
+        <ModalizeButton />
       </S.Container>
     </S.SafeContainer>
   );
