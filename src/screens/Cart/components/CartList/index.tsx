@@ -1,10 +1,21 @@
 import React from "react";
-import { View } from "react-native";
+import CartItem from "../CartItem";
 
-// import { Container } from './styles';
-
+import * as S from "./styles";
+const mock = [1, 2, 3, 4, 5, 6];
 const CartList: React.FC = () => {
-  return <View />;
+  const renderItem = () => {
+    return <CartItem />;
+  };
+  return (
+    <S.Container>
+      <S.FlatList
+        data={mock}
+        renderItem={renderItem}
+        showsVerticalScrollIndicator={false}
+      />
+    </S.Container>
+  );
 };
 
 export default CartList;
