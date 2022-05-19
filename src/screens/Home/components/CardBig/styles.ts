@@ -1,7 +1,8 @@
 import styled from "styled-components/native";
 
 export const Container = styled.View`
-  max-width: 200px;
+  max-width: 180px;
+  margin-right: 48px;
 `;
 
 export const CardImage = styled.Image`
