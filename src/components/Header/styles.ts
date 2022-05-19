@@ -17,3 +17,5 @@ export const Title = styled.Text`
   ${(props) => props.theme.textVariants.titleHeader};
   color: ${(props) => props.theme.colors.subtitle};
 `;
+
+export const TouchableBox = styled.TouchableOpacity``;

@@ -8,7 +8,7 @@ const Cart: React.FC = () => {
   return (
     <S.SafeContainer>
       <S.Container>
-        <Header title="CARRINHO" />
+        <Header title="CARRINHO" routeName="Home" />
         <S.Section>Meu Carrinho</S.Section>
       </S.Container>
     </S.SafeContainer>
