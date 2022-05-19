@@ -3,7 +3,7 @@ import { View } from "react-native";
 
 import * as S from "./styles";
 
-const CardBig: React.FC = () => {
+const CardMedium: React.FC = () => {
   return (
     <S.Container>
       <S.CardImage
@@ -13,12 +13,10 @@ const CardBig: React.FC = () => {
       />
       <S.Label>Roupa Masculina</S.Label>
       <S.Title>Fjallraven - Foldsack</S.Title>
-      <S.Subtitle>
-        Your perfect pack for everyday use and walks in the forest.
-      </S.Subtitle>
+
       <S.ProductValue>$109.95</S.ProductValue>
     </S.Container>
   );
 };
 
-export default CardBig;
+export default CardMedium;

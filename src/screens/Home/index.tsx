@@ -4,6 +4,7 @@ import NewsList from "./components/NewsList";
 import CartBag from "../../assets/BAG.png";
 
 import * as S from "./styles";
+import ProductList from "./components/ProductList";
 
 const mockCategoryList = [
   {
@@ -40,6 +41,10 @@ const Home: React.FC = () => {
         <S.SectionContainer>
           <S.Section>Novidades</S.Section>
           <NewsList />
+        </S.SectionContainer>
+        <S.SectionContainer>
+          <S.Section>Listagem</S.Section>
+          <ProductList />
         </S.SectionContainer>
       </S.Container>
     </S.SafeContainer>

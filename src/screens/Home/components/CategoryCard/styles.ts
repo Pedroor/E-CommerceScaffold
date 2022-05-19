@@ -8,7 +8,7 @@ export const CategoryContainer = styled.View<ActiveCategory>`
   width: 60px;
   height: 24px;
   border-radius: 8px;
-  margin-left: 4px;
+  margin-right: 16px;
   padding: 6px 10px 6px 10px;
   background-color: ${(props) =>
     props.isActive

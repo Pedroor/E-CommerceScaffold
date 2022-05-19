@@ -32,6 +32,7 @@ const CategoryList: React.FC<CategoryListProps> = ({
         data={categoryList}
         renderItem={renderItem}
         keyExtractor={(item) => item.categoryName}
+        showsHorizontalScrollIndicator={false}
       />
     </S.Container>
   );
