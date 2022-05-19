@@ -36,6 +36,9 @@ const Home: React.FC = () => {
           <S.Bag source={CartBag} />
         </S.RowContainer>
         <CategoryList categoryName="Últimos" categoryList={mockCategoryList} />
+        <S.SectionContainer>
+          <S.Section>Novidades</S.Section>
+        </S.SectionContainer>
       </S.Container>
     </S.SafeContainer>
   );

@@ -24,3 +24,12 @@ export const Bag = styled.Image`
   width: 24;
   height: 24;
 `;
+
+export const Section = styled.Text`
+  ${(props) => props.theme.textVariants.section}
+`;
+
+export const SectionContainer = styled.View`
+  margin-top: 16px;
+  margin-left: 16px;
+`;
