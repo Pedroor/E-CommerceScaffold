@@ -7,7 +7,7 @@ export default {
     secondary: "##ECE9FF",
     subtitle: "#85868A",
     background: "#E5E5E5",
-    semiGrey: "#F4F5F4",
+    semiGrey: "#6F6F6F",
     red: "#FA6555",
     green: "#41D168",
     title: "#f2231f",
