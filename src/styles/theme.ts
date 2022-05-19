@@ -8,6 +8,7 @@ export default {
     subtitle: "#85868A",
     background: "#E5E5E5",
     semiGrey: "#6F6F6F",
+    categoryCardGray: "#EBEBED",
     red: "#FA6555",
     green: "#41D168",
     title: "#f2231f",
