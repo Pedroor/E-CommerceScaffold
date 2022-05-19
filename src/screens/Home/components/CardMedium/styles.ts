@@ -6,6 +6,14 @@ export const Container = styled.View`
   margin-top: 24px;
 `;
 
+export const ButtonContainer = styled.View`
+  width: 160px;
+  height: 140px;
+  position: absolute;
+  top: 105;
+  left: 125;
+`;
+
 export const CardImage = styled.Image`
   width: 160px;
   height: 140px;

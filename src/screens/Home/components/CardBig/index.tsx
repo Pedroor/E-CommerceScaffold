@@ -1,5 +1,6 @@
 import React from "react";
 import { View } from "react-native";
+import FloatingButton from "../../../../components/FloatingButton";
 
 import * as S from "./styles";
 
@@ -16,7 +17,10 @@ const CardBig: React.FC = () => {
       <S.Subtitle>
         Your perfect pack for everyday use and walks in the forest.
       </S.Subtitle>
-      <S.ProductValue>$109.95</S.ProductValue>
+      <S.ValueContainer>
+        <S.ProductValue>$109.95</S.ProductValue>
+        <FloatingButton />
+      </S.ValueContainer>
     </S.Container>
   );
 };

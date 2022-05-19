@@ -1,10 +1,10 @@
 import React from "react";
 import CategoryList from "./components/CategoryList";
-import NewsList from "./components/NewsList";
-import CartBag from "../../assets/BAG.png";
 
 import * as S from "./styles";
-import ProductList from "./components/ProductList";
+import NewsSection from "./components/NewsSection";
+import ProductSection from "./components/ProductSection";
+import Header from "./components/Header";
 
 const mockCategoryList = [
   {
@@ -33,19 +33,10 @@ const Home: React.FC = () => {
   return (
     <S.SafeContainer>
       <S.Container>
-        <S.RowContainer>
-          <S.PageTitle>Produtos</S.PageTitle>
-          <S.Bag source={CartBag} />
-        </S.RowContainer>
+        <Header />
         <CategoryList categoryName="Últimos" categoryList={mockCategoryList} />
-        <S.SectionContainer>
-          <S.Section>Novidades</S.Section>
-          <NewsList />
-        </S.SectionContainer>
-        <S.SectionContainer>
-          <S.Section>Listagem</S.Section>
-          <ProductList />
-        </S.SectionContainer>
+        <NewsSection />
+        <ProductSection />
       </S.Container>
     </S.SafeContainer>
   );

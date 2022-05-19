@@ -32,3 +32,8 @@ export const ProductValue = styled.Text`
   ${(props) => props.theme.textVariants.price};
   color: ${(props) => props.theme.colors.primary};
 `;
+
+export const ValueContainer = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+`;
