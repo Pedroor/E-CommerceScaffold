@@ -10,7 +10,7 @@ export const ButtonContainer = styled.View`
   border-radius: 20px;
   border: 1px solid
   border-color: ${(props) => props.theme.colors.primary};
-  background-color: ${(props) => props.theme.colors.white}
+  background-color: ${(props) => props.theme.colors.white};
 `;
 
 export const ButtonIcon = styled.Image`
