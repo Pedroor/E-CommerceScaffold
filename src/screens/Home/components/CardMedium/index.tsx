@@ -1,24 +1,25 @@
 import React from "react";
-import { View } from "react-native";
+import { ProductProps } from "../../../../@types/interfaces";
 import FloatingButton from "../../../../components/FloatingButton";
+import { formatPrice } from "../../../../utils/parsers";
 
 import * as S from "./styles";
 
-const CardMedium: React.FC = () => {
+interface CardMediumProps {
+  product: ProductProps;
+}
+
+const CardMedium: React.FC<CardMediumProps> = ({ product }) => {
   return (
     <S.Container>
-      <S.CardImage
-        source={{
-          uri: "https://zeedog.vteximg.com.br/arquivos/mochila-classic-verde-azul-roxo-zeedog-human-main-1.jpg",
-        }}
-      />
+      <S.CardImage source={{ uri: product?.image }} />
       <S.ButtonContainer>
         <FloatingButton />
       </S.ButtonContainer>
-      <S.Label>Roupa Masculina</S.Label>
-      <S.Title>Fjallraven - Foldsack</S.Title>
+      <S.Label>{product?.category}</S.Label>
+      <S.Title>{product?.title}</S.Title>
 
-      <S.ProductValue>$109.95</S.ProductValue>
+      <S.ProductValue>{formatPrice(product?.price)}</S.ProductValue>
     </S.Container>
   );
 };

@@ -1,14 +1,18 @@
 import React from "react";
-import { View } from "react-native";
+import { ProductProps } from "../../../../@types/interfaces";
 import ProductList from "../ProductList";
 
 import * as S from "./styles";
 
-const ProductSection: React.FC = () => {
+interface ProductSectionProps {
+  products?: ProductProps[];
+}
+
+const ProductSection: React.FC<ProductSectionProps> = ({ products }) => {
   return (
     <S.SectionContainer>
       <S.Section>Listagem</S.Section>
-      <ProductList />
+      <ProductList products={products} />
     </S.SectionContainer>
   );
 };

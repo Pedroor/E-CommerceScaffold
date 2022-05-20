@@ -3,26 +3,13 @@ import CategoryCard from "../CategoryCard";
 
 import * as S from "./styles";
 
-interface CategoryList {
-  categoryName: string;
-  categoryIdentifier: number;
-}
 interface CategoryListProps {
-  categoryName: string;
-  categoryList: CategoryList[];
+  categoryList?: string[];
 }
 
-const CategoryList: React.FC<CategoryListProps> = ({
-  categoryName,
-  categoryList,
-}) => {
-  const renderItem = ({ item }: { item: CategoryList }) => {
-    return (
-      <CategoryCard
-        categoryName={item.categoryName}
-        categoryIdentifier={item.categoryIdentifier}
-      />
-    );
+const CategoryList: React.FC<CategoryListProps> = ({ categoryList }) => {
+  const renderItem = ({ item }: { item: string }) => {
+    return <CategoryCard categoryName={item} categoryIdentifier={item} />;
   };
 
   return (
@@ -31,7 +18,6 @@ const CategoryList: React.FC<CategoryListProps> = ({
       <S.FlatList
         data={categoryList}
         renderItem={renderItem}
-        keyExtractor={(item) => item.categoryName}
         showsHorizontalScrollIndicator={false}
       />
     </S.Container>

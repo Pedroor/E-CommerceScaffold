@@ -1,20 +1,25 @@
 import React from "react";
+import { ListRenderItem } from "react-native";
+import { ProductProps } from "../../../../@types/interfaces";
 import CardMedium from "../CardMedium";
 
 import * as S from "./styles";
 
-const mock = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+interface ProductSectionProps {
+  products?: ProductProps[];
+}
 
-const ProductList: React.FC = () => {
-  const renderItem = () => {
-    return <CardMedium />;
+const ProductList: React.FC<ProductSectionProps> = ({ products }) => {
+  const renderItem: ListRenderItem<ProductProps> = ({ item }) => {
+    return <CardMedium product={item} />;
   };
 
   return (
     <S.Container>
-      <S.FlatList
-        data={mock}
+      <S.List
+        data={products}
         renderItem={renderItem}
+        keyExtractor={(item: ProductProps) => item.id}
         showsVerticalScrollIndicator={false}
       />
     </S.Container>

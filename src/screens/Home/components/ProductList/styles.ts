@@ -1,3 +1,5 @@
+import { FlatList } from "react-native";
+import { ProductProps } from "../../../../@types/interfaces";
 import styled from "styled-components/native";
 
 export const Container = styled.View`
@@ -5,7 +7,7 @@ export const Container = styled.View`
   flex: 1;
 `;
 
-export const FlatList = styled.FlatList.attrs({
+export const List = styled(FlatList as new () => FlatList<ProductProps>).attrs({
   contentContainerStyle: {
     paddingBottom: 20,
   },

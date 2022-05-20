@@ -1,14 +1,14 @@
 import create from "zustand";
 
 type State = {
-  activeCategoryIdentifier: number;
-  updateCategoryListIdentifier: (categoryIdentifier: number) => void;
+  activeCategoryIdentifier: string;
+  updateCategoryListIdentifier: (categoryIdentifier: string) => void;
 };
 
 export const useCategoriesList = create<State>(
   (set) =>
     ({
-      updateCategoryListIdentifier: (categoryIdentifier: number) => {
+      updateCategoryListIdentifier: (categoryIdentifier: string) => {
         useCategoriesList.setState({
           activeCategoryIdentifier: categoryIdentifier,
         });
