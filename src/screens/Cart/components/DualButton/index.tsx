@@ -5,6 +5,7 @@ import LINE from "../../../../assets/Line.png";
 import { ProductCartProps } from "../../../../@types/interfaces";
 import * as S from "./styles";
 import useCart from "../../../../store/useCart";
+import { Alert } from "react-native";
 
 interface DualButtonProps {
   product: ProductCartProps;
@@ -17,7 +18,24 @@ const DualButton: React.FC<DualButtonProps> = ({ product }) => {
     addProduct(product);
   }, [product]);
   const handleRemoveProductToCart = useCallback(() => {
-    removeProduct(product);
+    if (product.amount === 1) {
+      Alert.alert(
+        "Remover Item! \nSe deseja remover o item do carrinho clique em prosseguir.",
+        "",
+
+        [
+          { text: "Cancelar", onPress: () => {} },
+          {
+            text: "Prosseguir",
+            onPress: () => {
+              removeProduct(product);
+            },
+          },
+        ]
+      );
+    } else {
+      removeProduct(product);
+    }
   }, [product]);
 
   return (

@@ -1,4 +1,5 @@
-import React from "react";
+import { useNavigation } from "@react-navigation/native";
+import React, { useCallback } from "react";
 import { View, Text } from "react-native";
 import Button from "../../components/Button";
 import Header from "../../components/Header";
@@ -10,7 +11,12 @@ import EmptyCart from "./components/EmptyCart";
 import * as S from "./styles";
 
 const Cart: React.FC = () => {
-  const { cartProducts } = useCart();
+  const { cartProducts, clearCart } = useCart();
+  const { navigate } = useNavigation();
+  const handlePressConfirmation = useCallback(() => {
+    clearCart();
+    navigate("Confirmation");
+  }, []);
 
   return (
     <S.SafeContainer>
@@ -21,7 +27,10 @@ const Cart: React.FC = () => {
           <>
             <CartList />
             <CartFooter />
-            <Button title="FINALIZAR COMPRA" />
+            <Button
+              title="FINALIZAR COMPRA"
+              onPress={handlePressConfirmation}
+            />
           </>
         ) : (
           <EmptyCart />

@@ -12,6 +12,7 @@ export type State = {
   cartProducts: ProductCart[];
   addProduct: (product: ProductProps) => void;
   removeProduct: (product: ProductProps) => void;
+  clearCart: () => void;
 };
 type PersistProps = (
   config: StateCreator<State>,
@@ -83,6 +84,11 @@ const useCart = create<State>(
               cartProducts: [...oldState, newCartProduct],
             });
           }
+        },
+        clearCart: () => {
+          useCart.setState({
+            cartProducts: [],
+          });
         },
       } as State),
     {

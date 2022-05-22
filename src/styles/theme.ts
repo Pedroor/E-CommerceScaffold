@@ -21,6 +21,16 @@ export default {
       fontFamily: "WorkSans-SemiBold",
       lineHeight: "28px",
     },
+    confirmationTitle: {
+      fontSize: "22px",
+      fontFamily: "WorkSans-Bold",
+      lineHeight: "25px",
+    },
+    confirmationSubtitle: {
+      fontSize: "14px",
+      fontFamily: "WorkSans-Medium",
+      lineHeight: "16px",
+    },
     header: {
       fontSize: "18px",
       fontFamily: "WorkSans-Bold",

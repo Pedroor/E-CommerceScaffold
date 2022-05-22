@@ -20,7 +20,6 @@
     "react-native": "0.68.2",
     "react-native-gesture-handler": "^2.4.2",
     "react-native-linear-gradient": "^2.5.6",
-    "react-native-modalize": "^2.0.13",
     "react-native-safe-area-context": "^4.2.5",
     "react-native-screens": "^3.13.1",
     "react-native-skeleton-placeholder": "^5.0.0",
