@@ -17,9 +17,12 @@ const Header: React.FC = () => {
     <S.RowContainer>
       <S.PageTitle>Produtos</S.PageTitle>
       <S.TouchableBox onPress={() => handleNavigateToCart()}>
-        <S.IndicationCartAmount>
-          <S.TextRed>{cartProducts.length}</S.TextRed>
-        </S.IndicationCartAmount>
+        {cartProducts.length !== 0 && (
+          <S.IndicationCartAmount>
+            <S.TextRed>{cartProducts.length}</S.TextRed>
+          </S.IndicationCartAmount>
+        )}
+
         <S.Bag source={CartBag} />
       </S.TouchableBox>
     </S.RowContainer>
