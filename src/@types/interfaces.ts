@@ -6,3 +6,7 @@ export interface ProductProps {
   description: string;
   image: string;
 }
+export interface ProductCartProps extends ProductProps {
+  totalAmount: number;
+  amount: number;
+}

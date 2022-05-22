@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { View } from "react-native";
 import { ProductProps } from "../../../../@types/interfaces";
 import FloatingButton from "../../../../components/FloatingButton";
+import useCart from "../../../../store/useCart";
 import { formatPrice } from "../../../../utils/parsers";
 
 import * as S from "./styles";
@@ -11,6 +12,12 @@ interface CardBigProps {
 }
 
 const CardBig: React.FC<CardBigProps> = ({ product }) => {
+  const { addProduct } = useCart();
+
+  const handleAddProductToCart = useCallback(() => {
+    addProduct(product);
+  }, [product]);
+
   return (
     <S.Container>
       <S.CardImage
@@ -27,7 +34,7 @@ const CardBig: React.FC<CardBigProps> = ({ product }) => {
       }...`}</S.Subtitle>
       <S.ValueContainer>
         <S.ProductValue>{formatPrice(product?.price)}</S.ProductValue>
-        <FloatingButton />
+        <FloatingButton onPress={handleAddProductToCart} />
       </S.ValueContainer>
     </S.Container>
   );

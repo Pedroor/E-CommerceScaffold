@@ -1,16 +1,21 @@
 import React from "react";
+import { ListRenderItem } from "react-native";
+import { ProductCartProps } from "../../../../@types/interfaces";
+import useCart from "../../../../store/useCart";
 import CartItem from "../CartItem";
 
 import * as S from "./styles";
-const mock = [1, 2, 3, 4, 5, 6];
+
 const CartList: React.FC = () => {
-  const renderItem = () => {
-    return <CartItem />;
+  const { cartProducts } = useCart();
+
+  const renderItem: ListRenderItem<ProductCartProps> = ({ item }) => {
+    return <CartItem product={item} />;
   };
   return (
     <S.Container>
       <S.FlatList
-        data={mock}
+        data={cartProducts}
         renderItem={renderItem}
         showsVerticalScrollIndicator={false}
       />

@@ -1,20 +1,28 @@
 import React from "react";
+import { ProductCartProps } from "../../../../@types/interfaces";
+import { formatPrice } from "../../../../utils/parsers";
 import DualButton from "../DualButton";
 
 import * as S from "./styles";
 
-const CartItem: React.FC = () => {
+interface CartItemProps {
+  product: ProductCartProps;
+}
+
+const CartItem: React.FC<CartItemProps> = ({ product }) => {
   return (
     <S.Container>
       <S.ProductContainer>
         <S.ProductImage
           source={{
-            uri: "https://zeedog.vteximg.com.br/arquivos/mochila-classic-verde-azul-roxo-zeedog-human-main-1.jpg",
+            uri: product.image,
           }}
         />
         <S.ProductInformation>
-          <S.Title>Fjallraven - Foldsack</S.Title>
-          <S.Price>1x $109.95</S.Price>
+          <S.Title>{product.title.substring(0, 20)}</S.Title>
+          <S.Price>
+            {product.amount}x {formatPrice(product.totalAmount.toString())}
+          </S.Price>
         </S.ProductInformation>
         <DualButton />
       </S.ProductContainer>
