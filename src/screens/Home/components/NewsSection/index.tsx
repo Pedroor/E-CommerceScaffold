@@ -5,15 +5,11 @@ import NewsList from "../NewsList";
 
 import * as S from "./styles";
 
-interface NewsSectionProps {
-  newsProducts: ProductProps[];
-}
-
-const NewsSection: React.FC<NewsSectionProps> = ({ newsProducts }) => {
+const NewsSection: React.FC = () => {
   return (
     <S.SectionContainer>
       <S.Section>Novidades</S.Section>
-      <NewsList newsProducts={newsProducts} />
+      <NewsList />
     </S.SectionContainer>
   );
 };

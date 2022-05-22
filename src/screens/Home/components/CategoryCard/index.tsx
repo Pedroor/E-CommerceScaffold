@@ -1,23 +1,28 @@
 import React, { useCallback, useState } from "react";
 import { useCategoriesList } from "../../../../store/useCategoriesList";
+import { useProducts } from "../../../../store/useProducts";
 
 import * as S from "./styles";
 
 interface CategoryCardProps {
   categoryName: string;
-  categoryIdentifier: number;
+  categoryIdentifier: string;
 }
 const CategoryCard: React.FC<CategoryCardProps> = ({
   categoryName,
   categoryIdentifier,
 }) => {
   const [isActiveCategory, setIsActiveCategory] = useState<boolean>(false);
-  const { activeCategoryIdentifier, updateCategoryListIdentifier } =
-    useCategoriesList();
+  const {
+    updateCategoryListIdentifier,
+    activeCategoryIdentifier,
+    getProductsByCategory,
+  } = useProducts();
 
   const handleTouchCategory = useCallback(() => {
     setIsActiveCategory(true);
     updateCategoryListIdentifier(categoryIdentifier);
+    getProductsByCategory(categoryIdentifier);
   }, [activeCategoryIdentifier]);
 
   return (

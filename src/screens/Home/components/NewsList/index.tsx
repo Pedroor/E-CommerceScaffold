@@ -1,14 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { ProductProps } from "../../../../@types/interfaces";
 import { ListRenderItem } from "react-native";
 import CardBig from "../CardBig";
 import * as S from "./styles";
+import { useProducts } from "../../../../store/useProducts";
 
-interface NewsListProps {
-  newsProducts: ProductProps[];
-}
+const NewsList: React.FC = () => {
+  const { newsProductsList } = useProducts();
 
-const NewsList: React.FC<NewsListProps> = ({ newsProducts }) => {
   const renderItem: ListRenderItem<ProductProps> = ({ item }) => {
     return <CardBig product={item} />;
   };
@@ -16,7 +15,7 @@ const NewsList: React.FC<NewsListProps> = ({ newsProducts }) => {
   return (
     <S.Container>
       <S.List
-        data={newsProducts}
+        data={newsProductsList}
         renderItem={renderItem}
         keyExtractor={(item: ProductProps) => item?.id}
         showsHorizontalScrollIndicator={false}

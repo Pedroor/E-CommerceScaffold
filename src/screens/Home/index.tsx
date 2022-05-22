@@ -10,29 +10,6 @@ import { ProductProps } from "../../@types/interfaces";
 import { getAllProducts } from "../../services/products";
 import { getAllCategories } from "../../services/categories";
 
-const mockCategoryList = [
-  {
-    categoryName: "Últimos",
-    categoryIdentifier: 1,
-  },
-  {
-    categoryName: "Roupas",
-    categoryIdentifier: 2,
-  },
-  {
-    categoryName: "Perfumes",
-    categoryIdentifier: 3,
-  },
-  {
-    categoryName: "Games",
-    categoryIdentifier: 4,
-  },
-  {
-    categoryName: "Músicas",
-    categoryIdentifier: 5,
-  },
-];
-
 const Home: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [newsProducts, setNewsProducts] = useState<ProductProps[]>();
@@ -68,8 +45,8 @@ const Home: React.FC = () => {
     <S.SafeContainer>
       <S.Container>
         <Header />
-        <CategoryList categoryList={categories} />
-        <NewsSection newsProducts={newsProducts} />
+        <CategoryList />
+        <NewsSection />
         <ProductSection products={products} />
         <ModalizeButton />
       </S.Container>

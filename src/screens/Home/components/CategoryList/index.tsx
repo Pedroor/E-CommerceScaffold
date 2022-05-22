@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useProducts } from "../../../../store/useProducts";
 import CategoryCard from "../CategoryCard";
 
 import * as S from "./styles";
 
-interface CategoryListProps {
-  categoryList?: string[];
-}
+const CategoryList: React.FC = () => {
+  const { getCategories, categoriesList } = useProducts();
 
-const CategoryList: React.FC<CategoryListProps> = ({ categoryList }) => {
+  useEffect(() => {
+    async function fetchCategories() {
+      await getCategories();
+    }
+    fetchCategories();
+  }, []);
+
   const renderItem = ({ item }: { item: string }) => {
     return <CategoryCard categoryName={item} categoryIdentifier={item} />;
   };
@@ -16,7 +22,7 @@ const CategoryList: React.FC<CategoryListProps> = ({ categoryList }) => {
     <S.Container>
       <S.CategoryLabel>FILTRAR CATEGORIA</S.CategoryLabel>
       <S.FlatList
-        data={categoryList}
+        data={categoriesList}
         renderItem={renderItem}
         showsHorizontalScrollIndicator={false}
       />
