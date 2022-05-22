@@ -11,15 +11,15 @@ import {
 import { shuffleArray } from "../utils/functions";
 
 export type State = {
+  productsList: ProductProps[];
+  newsProductsList: ProductProps[];
+  categoriesList: string[];
   activeCategoryIdentifier: string;
   updateCategoryListIdentifier: (categoryIdentifier: string) => void;
   getProducts: () => Promise<void>;
   getProductsByCategory: (categoryIdentifier: string) => Promise<void>;
   getNewsProductsByCategory: (categoryIdentifier: string) => Promise<void>;
   getCategories: () => Promise<void>;
-  productsList: ProductProps[];
-  newsProductsList: ProductProps[];
-  categoriesList: string[];
 };
 type PersistProps = (
   config: StateCreator<State>,

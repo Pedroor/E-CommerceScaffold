@@ -9,9 +9,9 @@ interface ProductCart extends ProductProps {
 }
 
 export type State = {
+  cartProducts: ProductCart[];
   addProduct: (product: ProductProps) => void;
   removeProduct: (product: ProductProps) => void;
-  cartProducts: ProductCart[];
 };
 type PersistProps = (
   config: StateCreator<State>,
