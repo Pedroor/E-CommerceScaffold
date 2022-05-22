@@ -4,15 +4,11 @@ import ProductList from "../ProductList";
 
 import * as S from "./styles";
 
-interface ProductSectionProps {
-  products?: ProductProps[];
-}
-
-const ProductSection: React.FC<ProductSectionProps> = ({ products }) => {
+const ProductSection: React.FC = () => {
   return (
     <S.SectionContainer>
       <S.Section>Listagem</S.Section>
-      <ProductList products={products} />
+      <ProductList />
     </S.SectionContainer>
   );
 };

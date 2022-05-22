@@ -6,13 +6,16 @@ import { getAllProducts } from "../services/products";
 import {
   getAllCategories,
   getProductsByCategory,
+  getProductsByCategoryFirstFive,
 } from "../services/categories";
+import { shuffleArray } from "../utils/functions";
 
 export type State = {
   activeCategoryIdentifier: string;
   updateCategoryListIdentifier: (categoryIdentifier: string) => void;
   getProducts: () => Promise<void>;
   getProductsByCategory: (categoryIdentifier: string) => Promise<void>;
+  getNewsProductsByCategory: (categoryIdentifier: string) => Promise<void>;
   getCategories: () => Promise<void>;
   productsList: ProductProps[];
   newsProductsList: ProductProps[];
@@ -36,18 +39,28 @@ export const useProducts = create<State>(
           const productsResponse = await getAllProducts();
           useProducts.setState({
             productsList: productsResponse,
-            newsProductsList: productsResponse.splice(0, 5),
+            newsProductsList: productsResponse,
           });
         },
         getProductsByCategory: async (categoryIdentifier: string) => {
           const productsResponse = await getProductsByCategory(
             categoryIdentifier
           );
+
           useProducts.setState({
-            productsList: productsResponse,
-            newsProductsList: productsResponse.splice(0, 5),
+            productsList: shuffleArray(productsResponse),
           });
         },
+        getNewsProductsByCategory: async (categoryIdentifier: string) => {
+          const productsResponse = await getProductsByCategoryFirstFive(
+            categoryIdentifier
+          );
+
+          useProducts.setState({
+            newsProductsList: productsResponse,
+          });
+        },
+
         getCategories: async () => {
           const categoriesResponse = await getAllCategories();
           useProducts.setState({

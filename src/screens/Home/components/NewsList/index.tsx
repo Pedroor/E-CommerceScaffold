@@ -7,7 +7,7 @@ import { useProducts } from "../../../../store/useProducts";
 
 const NewsList: React.FC = () => {
   const { newsProductsList } = useProducts();
-
+  const products = newsProductsList;
   const renderItem: ListRenderItem<ProductProps> = ({ item }) => {
     return <CardBig product={item} />;
   };

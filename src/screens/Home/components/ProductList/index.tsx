@@ -1,15 +1,13 @@
 import React from "react";
 import { ListRenderItem } from "react-native";
 import { ProductProps } from "../../../../@types/interfaces";
+import { useProducts } from "../../../../store/useProducts";
 import CardMedium from "../CardMedium";
 
 import * as S from "./styles";
 
-interface ProductSectionProps {
-  products?: ProductProps[];
-}
-
-const ProductList: React.FC<ProductSectionProps> = ({ products }) => {
+const ProductList: React.FC = () => {
+  const { productsList } = useProducts();
   const renderItem: ListRenderItem<ProductProps> = ({ item }) => {
     return <CardMedium product={item} />;
   };
@@ -17,7 +15,7 @@ const ProductList: React.FC<ProductSectionProps> = ({ products }) => {
   return (
     <S.Container>
       <S.List
-        data={products}
+        data={productsList}
         renderItem={renderItem}
         keyExtractor={(item: ProductProps) => item.id}
         showsVerticalScrollIndicator={false}
