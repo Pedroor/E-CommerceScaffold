@@ -47,6 +47,7 @@ const useCart = create<State>(
               amount: newAmount,
               totalAmount: newTotalAmount,
             };
+            console.log(newCartProduct.totalAmount);
 
             const oldState = cart?.filter(
               (products) => products.id !== existingProduct.id
@@ -61,11 +62,11 @@ const useCart = create<State>(
           const existingProduct = cart?.find(
             (cartProduct) => cartProduct.id === product.id
           );
+          const oldState = cart?.filter(
+            (products) => products.id !== existingProduct.id
+          );
 
           if (existingProduct?.amount === 1) {
-            const oldState = cart?.filter(
-              (products) => products.id !== existingProduct.id
-            );
             useCart.setState({
               cartProducts: oldState,
             });
@@ -79,7 +80,7 @@ const useCart = create<State>(
               totalAmount: newTotalAmount,
             };
             useCart.setState({
-              cartProducts: [...cart, newCartProduct],
+              cartProducts: [...oldState, newCartProduct],
             });
           }
         },

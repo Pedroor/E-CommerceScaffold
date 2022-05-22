@@ -15,14 +15,14 @@ export const Container = styled.View`
 `;
 
 export const LeftButton = styled.Image`
-  width: 12px;
-  height: 4px;
+  width: 16px;
+  height: 6px;
   align-self: center;
 `;
 
 export const RightButton = styled.Image`
-  width: 10px;
-  height: 10px;
+  width: 14px;
+  height: 14px;
   align-self: center;
 `;
 

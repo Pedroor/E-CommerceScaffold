@@ -21,10 +21,10 @@ const CartItem: React.FC<CartItemProps> = ({ product }) => {
         <S.ProductInformation>
           <S.Title>{product.title.substring(0, 20)}</S.Title>
           <S.Price>
-            {product.amount}x {formatPrice(product.totalAmount.toString())}
+            {product.amount}x {formatPrice(product.price.toString())}
           </S.Price>
         </S.ProductInformation>
-        <DualButton />
+        <DualButton product={product} />
       </S.ProductContainer>
     </S.Container>
   );
