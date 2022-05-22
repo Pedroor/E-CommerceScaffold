@@ -15,6 +15,8 @@ export type State = {
   newsProductsList: ProductProps[];
   categoriesList: string[];
   activeCategoryIdentifier: string;
+  newsProductsLoading: boolean;
+  productsLoading: boolean;
   updateCategoryListIdentifier: (categoryIdentifier: string) => void;
   getProducts: () => Promise<void>;
   getProductsByCategory: (categoryIdentifier: string) => Promise<void>;
@@ -43,21 +45,29 @@ export const useProducts = create<State>(
           });
         },
         getProductsByCategory: async (categoryIdentifier: string) => {
+          useProducts.setState({
+            productsLoading: true,
+          });
           const productsResponse = await getProductsByCategory(
             categoryIdentifier
           );
 
           useProducts.setState({
             productsList: shuffleArray(productsResponse),
+            productsLoading: false,
           });
         },
         getNewsProductsByCategory: async (categoryIdentifier: string) => {
+          useProducts.setState({
+            newsProductsLoading: true,
+          });
           const productsResponse = await getProductsByCategoryFirstFive(
             categoryIdentifier
           );
 
           useProducts.setState({
             newsProductsList: productsResponse,
+            newsProductsLoading: false,
           });
         },
 

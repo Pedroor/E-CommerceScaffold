@@ -1,8 +1,9 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback } from "react";
 import SkeletonPlaceholder from "react-native-skeleton-placeholder";
 import { ProductProps } from "../../../../@types/interfaces";
 import FloatingButton from "../../../../components/FloatingButton";
 import useCart from "../../../../store/useCart";
+import { useProducts } from "../../../../store/useProducts";
 import { formatPrice } from "../../../../utils/parsers";
 
 import * as S from "./styles";
@@ -12,14 +13,14 @@ interface CardBigProps {
 }
 
 const CardBig: React.FC<CardBigProps> = ({ product }) => {
-  const [loading, setLoading] = useState(true);
   const { addProduct } = useCart();
+  const { newsProductsLoading, productsLoading } = useProducts();
 
   const handleAddProductToCart = useCallback(() => {
     addProduct(product);
   }, [product]);
 
-  if (loading) {
+  if (newsProductsLoading || productsLoading) {
     return (
       <SkeletonPlaceholder maxWidth={180}>
         <SkeletonPlaceholder.Item width={180} height={180} marginLeft={12} />
