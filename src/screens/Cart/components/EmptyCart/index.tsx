@@ -1,10 +1,24 @@
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
-import { View } from "react-native";
+import EmptyBag from "../../../../assets/EMPTY_BAG.png";
+import Button from "../../../../components/Button";
 
-// import { Container } from './styles';
+import * as S from "./styles";
 
 const EmptyCart: React.FC = () => {
-  return <View />;
+  const { navigate } = useNavigation();
+  return (
+    <>
+      <S.Container>
+        <S.MessageContainer>
+          <S.EmptyBag source={EmptyBag} />
+          <S.Message>{`Nenhum item adicionado \n no carrinho.`}</S.Message>
+        </S.MessageContainer>
+
+        <Button title="ADICIONAR ITENS" onPress={() => navigate("Home")} />
+      </S.Container>
+    </>
+  );
 };
 
 export default EmptyCart;
