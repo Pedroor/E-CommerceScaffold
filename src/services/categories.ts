@@ -13,7 +13,7 @@ export async function getAllCategories() {
 export async function getProductsByCategory(categoryName: string) {
   try {
     const response = await api.get(`/products/category/${categoryName}`);
-    console.log("PRODUCTS @@", response.data.length);
+
     return response.data as ProductProps[];
   } catch (error) {
     throw error;

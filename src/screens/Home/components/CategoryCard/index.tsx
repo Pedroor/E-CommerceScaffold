@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback } from "react";
 import { useProducts } from "../../../../store/useProducts";
 
 import * as S from "./styles";
@@ -11,7 +11,6 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
   categoryName,
   categoryIdentifier,
 }) => {
-  const [isActiveCategory, setIsActiveCategory] = useState<boolean>(false);
   const {
     updateCategoryListIdentifier,
     activeCategoryIdentifier,
@@ -20,7 +19,6 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
   } = useProducts();
 
   const handleTouchCategory = useCallback(() => {
-    setIsActiveCategory(true);
     updateCategoryListIdentifier(categoryIdentifier);
     getProductsByCategory(categoryIdentifier);
     getNewsProductsByCategory(categoryIdentifier);

@@ -10,7 +10,6 @@ const Header: React.FC = () => {
   const { cartProducts } = useCart();
 
   const handleNavigateToCart = () => {
-    console.log("navigate");
     navigation.navigate("Cart");
   };
   return (

@@ -48,7 +48,6 @@ const useCart = create<State>(
               amount: newAmount,
               totalAmount: newTotalAmount,
             };
-            console.log(newCartProduct.totalAmount);
 
             const oldState = cart?.filter(
               (products) => products.id !== existingProduct.id

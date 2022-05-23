@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { ProductProps } from "../../../../@types/interfaces";
 import { ListRenderItem } from "react-native";
 import CardBig from "../CardBig";

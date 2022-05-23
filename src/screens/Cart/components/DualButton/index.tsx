@@ -17,6 +17,7 @@ const DualButton: React.FC<DualButtonProps> = ({ product }) => {
   const handleAddProductToCart = useCallback(() => {
     addProduct(product);
   }, [product]);
+
   const handleRemoveProductToCart = useCallback(() => {
     if (product.amount === 1) {
       Alert.alert(

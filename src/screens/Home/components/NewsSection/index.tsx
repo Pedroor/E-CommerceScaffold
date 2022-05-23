@@ -1,6 +1,4 @@
 import React from "react";
-import { View } from "react-native";
-import { ProductProps } from "../../../../@types/interfaces";
 import NewsList from "../NewsList";
 
 import * as S from "./styles";

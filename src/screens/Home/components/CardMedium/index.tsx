@@ -1,10 +1,10 @@
 import React, { useCallback } from "react";
 import SkeletonPlaceholder from "react-native-skeleton-placeholder";
 import { ProductProps } from "../../../../@types/interfaces";
-import FloatingButton from "../../../../components/FloatingButton";
-import useCart from "../../../../store/useCart";
 import { useProducts } from "../../../../store/useProducts";
 import { formatPrice } from "../../../../utils/parsers";
+import FloatingButton from "../../../../components/FloatingButton";
+import useCart from "../../../../store/useCart";
 
 import * as S from "./styles";
 
