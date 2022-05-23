@@ -73,7 +73,7 @@ Ao pressionar o botão "FINALIZAR COMPRA" o usuário deve ser levado para a tela
 
 ```
 
-Segue o link para consulta do layout: - - [React-Native CLI](https://www.figma.com/file/eBNLxQP4rQCmu28s2JmTPN/E-commerce?node-id=0%3A1) 
+Segue o link para consulta do layout: - - [FIGMA](https://www.figma.com/file/eBNLxQP4rQCmu28s2JmTPN/E-commerce?node-id=0%3A1) 
 
 
 Funcionalidades a serem implementadas futuramente.
