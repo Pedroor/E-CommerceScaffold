@@ -14,11 +14,11 @@
 </p>
 
 <h1 align="center">
- <img alt="Home" src="https://i.imgur.com/zzekaUW.png" width="400" />
- <img alt="Home" src="https://i.imgur.com/mql0Qn5.png" width="400" />
+ <img alt="Home" src="https://i.imgur.com/2Nv7iF7.png" width="400" />
+ <img alt="Home" src="https://i.imgur.com/GiwUdxo.png" width="400" />
   <h1 align="center">
- <img alt="Home" src="https://i.imgur.com/zzekaUW.png" width="400" />
- <img alt="Home" src="https://i.imgur.com/mql0Qn5.png" width="400" />
+ <img alt="Home" src="https://i.imgur.com/RJxwcSG.png" width="400" />
+ <img alt="Home" src="https://i.imgur.com/EpR9CYY.png" width="400" />
 
 
 </h1>
@@ -42,13 +42,11 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 - [React-Native CLI](https://reactnative.dev/docs/environment-setup)
 - [React Native](https://reactnative.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
-- [React Query](https://react-query.tanstack.com/)
 - [Zustand](https://github.com/pmndrs/zustand)
 - [React Navigation](https://reactnavigation.org/)
 - [React Native Gesture Handler](https://kmagiera.github.io/react-native-gesture-handler/)
 - [Axios](https://github.com/axios/axios)
 - [Styled Components](https://styled-components.com/)
-- [React-Native-Vector-Icons](https://github.com/oblador/react-native-vector-icons)
 - [VS Code](https://code.visualstudio.com/) com [Prettier](https://prettier.io/)
 
 ## :books: Requisitos
@@ -74,12 +72,9 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 
 ## :iphone: Iniciando mobile
 ```bash
-  # No mesmo diretorio abrir 2 consoles no terminal:
-  # No primeiro console:
-   
-  $ react-native start
-
-  # No segundo console:
+  # No mesmo diretorio abrir um console no terminal:
+  # No console basta digitar:
+  
   $ yarn android ou yarn ios
 ```
 
