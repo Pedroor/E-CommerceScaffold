@@ -21,8 +21,8 @@ const DualButton: React.FC<DualButtonProps> = ({ product }) => {
   const handleRemoveProductToCart = useCallback(() => {
     if (product.amount === 1) {
       Alert.alert(
-        "Remover Item! \nSe deseja remover o item do carrinho clique em prosseguir.",
-        "",
+        "Remover Item",
+        "Se deseja remover o item do carrinho clique em prosseguir.",
 
         [
           { text: "Cancelar", onPress: () => {} },
