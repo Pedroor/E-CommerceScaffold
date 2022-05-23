@@ -27,13 +27,60 @@
 </h1>
 
 ## :page_with_curl: Sobre
-Este repositório contém um desafio sobre desenvolvimento mobile com React-Native.
+Este repositório contém um boilerplate de um pequeno e-commerce, feito utilizando as principais ferramentas do ecossistema react-native.
 
-Na aplicação o usuário pode buscar e visualizar um filme ou mais filmes, como também criar uma lista com seus filmes favoritos apagar e excluir para facilitar o trabalho foi utilizada a  [omdApi](http://www.omdbapi.com/).
+Para a listagem de produtos foi utilizado a https://fakestoreapi.com/.
+Como ferramenta de gerenciamento de estado e persistência de alguns dados foi utilizado o - [Zustand](https://github.com/pmndrs/zustand)
 
-O objetivo principal desse projeto foi colocar meus conhecimentos em React-Native na prática. Meu principal foco foi lógica de programação, criação de uma aplicação bem modularizada,escalável e de fácil manutenção utilizando desde de ferramentas mais consolidadas a ferramentas hypadas e ainda pouco conhecidas dentro da comunidade, criação de componentes reutilizáveis e acima de tudo performance! Daria para melhorar e muito a User Experience da aplicação porém o foco foi o que citei acima.
+O objetivo principal desse projeto foi seguir alguns requisitos tanto de layout, quanto de regras de negócio.
 
-Gostaria de hypar um pouco o Zustand pois com apenas 40 linhas de código consegui criar um boilerplate de state management persistindo os dados no Async Storage, achei isso muito massa!
+Logo abaixo segue alguns pontos do que foi implementado
+
+```bash
+1- Splash screen
+
+2= Home
+Listagem de produtos:
+
+- Deve apresentar a lista de produtos e categorias consumidas através da API indicada nos pré-requisitos;
+- Se atentar para o carrossel horizontal para o filtro e novidades;
+- Os produtos no carrossel de novidades devem ser os primeiros cinco produtos retornados pela API;
+- Apenas pode ter um filtro marcado a cada solicitação.
+Adicionar item ao carrinho:
+
+- Pode ser adicionado mais de um item para o carrinho;
+- Quando existir itens no carrinho deve ser exibida uma interface no rodapé da tela permitindo ir para o carrinho (frame do Figma 02.01- ITEM_ON_CART);
+- A quantidade de produtos no carrinho deve ser apresentada através de um badge no ícone do carrinho na Navigation Bar.
+Persistência de estado:
+
+- O estado do carrinho deve ser persistido entre sessões, até a finalização do checkout.
+
+3- Carrinho
+Listagem de itens adicionados ao carrinho:
+
+- Deve apresentar os itens adicionados ao carrinho;
+- Deve ser possível adicionar ou remover os itens do carrinho;
+- Deve apresentar o valor total do carrinho.
+Modal remoção de itens
+
+- Ao remover um item com apenas uma unidade, deve ser apresentado um modal perguntando sobre a remoção do item do carrinho (frame do Figma 03.01 - CART).
+Carrinho vazio
+
+- Deve ser apresentado uma interface amigável caso o carrinho não possua itens adicionados (frame do Figma 03.02 - CART_EMPTY).
+
+4- Confirmação
+Ao pressionar o botão "FINALIZAR COMPRA" o usuário deve ser levado para a tela de confirmação e ter seu carrinho zerado (frame do Figma 04 - CONFIRMATION).
+
+```
+
+Segue o link para consulta do layout: - - [React-Native CLI](https://www.figma.com/file/eBNLxQP4rQCmu28s2JmTPN/E-commerce?node-id=0%3A1) 
+
+
+Funcionalidades a serem implementadas futuramente.
+
+- [Integração com um gateway de pagamentos. STRIPE ](https://stripe.com/br)
+- Implementar um tema dark para a aplicação
+
 
 ## :hammer: Tecnologias
 
@@ -51,7 +98,7 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 
 ## :books: Requisitos
 - Ter [**Git**](https://git-scm.com/) para clonar o projeto.
-- - Ter [**React-Native**](https://reactnative.dev/docs/environment-setup) configurado para executar o projeto.
+- Ter [**React-Native**](https://reactnative.dev/docs/environment-setup) configurado para executar o projeto.
 - Ter [**Node.js**](https://nodejs.org/en/) instalado.
 - Um dispositivo ou emulador iOS ou Android
 
