@@ -79,6 +79,7 @@ Segue o link para consulta do layout: - - [FIGMA](https://www.figma.com/file/eBN
 Funcionalidades a serem implementadas futuramente.
 
 - [Integração com um gateway de pagamentos. STRIPE ](https://stripe.com/br)
+- - [Integração com o React-Query para data fetching ](https://react-query.tanstack.com/)
 - Implementar um tema dark para a aplicação
 
 
