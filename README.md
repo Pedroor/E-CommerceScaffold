@@ -27,6 +27,9 @@
 </h1>
 
 ## :page_with_curl: Sobre
+
+PS: Por algum motivo nos projetos novos que estou criando via react-native init, tem um monte de coisa nativa que ta subindo para o git e com receio de quebrar, eu acabei subindo assim mesmo.
+
 Este repositório contém um boilerplate de um pequeno e-commerce, feito utilizando as principais ferramentas do ecossistema react-native.
 
 Para a listagem de produtos foi utilizado a https://fakestoreapi.com/.
