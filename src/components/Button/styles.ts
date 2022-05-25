@@ -14,7 +14,7 @@ export const Button = styled.TouchableOpacity`
   align-items: center;
   justify-content: center;
   margin-top: 32px;
-  border-width: 1;
+  border-width: 1px;
   border-radius: 28px;
   background-color: ${(props) => props?.theme?.colors?.primaryDark};
 `;
