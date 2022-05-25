@@ -10,8 +10,8 @@ export const ButtonContainer = styled.View`
   width: 160px;
   height: 140px;
   position: absolute;
-  top: 105;
-  left: 125;
+  top: 105px;
+  left: 125px;
 `;
 
 export const CardImage = styled.Image`

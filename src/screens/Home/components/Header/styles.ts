@@ -13,8 +13,8 @@ export const PageTitle = styled.Text`
 `;
 
 export const Bag = styled.Image`
-  width: 24;
-  height: 24;
+  width: 24px;
+  height: 24px;
 `;
 
 export const TouchableBox = styled.TouchableOpacity``;
