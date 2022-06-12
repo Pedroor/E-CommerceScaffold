@@ -1,6 +1,0 @@
-module Pods_EcommerceScaffold {
-  umbrella header "Pods-EcommerceScaffold-umbrella.h"
-
-  export *
-  module * { export * }
-}
