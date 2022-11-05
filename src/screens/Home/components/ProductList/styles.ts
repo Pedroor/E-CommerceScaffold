@@ -7,6 +7,11 @@ export const Container = styled.View`
   flex: 1;
 `;
 
+export const CardContainer = styled.View`
+  flex-direction: row;
+  flex-wrap: wrap;
+`;
+
 export const List = styled(FlatList as new () => FlatList<ProductProps>).attrs({
   contentContainerStyle: {
     paddingBottom: 20,
