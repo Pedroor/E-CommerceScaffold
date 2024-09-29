@@ -14,11 +14,11 @@
 </p>
 
 <h1 align="center">
- <img alt="Home" src="https://i.imgur.com/2Nv7iF7.png" width="400" />
- <img alt="Home" src="https://i.imgur.com/GiwUdxo.png" width="400" />
+ <img alt="Step1" src="https://i.imgur.com/2Nv7iF7.png" width="400" />
+ <img alt="Step2" src="https://imgur.com/lmp64Ch" width="400" />
   <h1 align="center">
- <img alt="Home" src="https://i.imgur.com/RJxwcSG.png" width="400" />
- <img alt="Home" src="https://i.imgur.com/EpR9CYY.png" width="400" />
+ <img alt="Step3" src="https://imgur.com/vPqJXYq" width="400" />
+ <img alt="Step4" src="https://imgur.com/iEne3cV" width="400" />
 
 
 </h1>
